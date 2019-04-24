@@ -10,27 +10,36 @@
 // Try to edit some of the values below to see your theme change.
 // A good start is to change the color of the `@base-background-color` variable.
 
-
+@import "colors";
 // Text Colors
 @text-color:           lighten(@text-color-subtle, 15%);
 @text-color-subtle:    lighten(#313557, 30%);
 @text-color-highlight: lighten(#785394, 28%);
 @text-color-selected:  #c5b1d3;
 
-@text-color-info:    saturate(#b1c0d3, 50%);
+@text-color-info:    darken(saturate(#b1c0d3, 50%), 10%);
+// @text-color-info:    @BoldMagenta;
+// @text-color-info:    lighten(saturate(#b1c0d3, 60%), 5%);
+// @text-color-info:   @Blue;
 @text-color-success: darken(spin(saturate(#c0d3b1, 50%), -30), 35%);
 @text-color-warning: spin(saturate(#d3c5b1, 50%), -20);
 @text-color-error:   saturate(#d3b1c0, 50%);
 
 // Background colors
-@background-color-info:    #413fb5;
-@background-color-success: hsl(160,  70%, 36%);
-@background-color-warning: hsl(32,   60%, 50%);
-@background-color-error:   hsl(0,    70%, 50%);
+// @background-color-info:    #3658bf;
+// @background-color-info:    spin(@Magenta, 165);
+@background-color-info:    @Magenta;
+@background-color-success: @Green;
+@background-color-warning: #ea8731;
+// @background-color-error:   spin(saturate(@text-color-error, 20%), -30); //#fe86f7
+@background-color-error:   #d64444;//#843256; // #845381;
+
+// @background-color-error:   saturate(@text-color-error, 20%);
+// @background-color-error:   @text-color-error;
 
 @background-color-highlight: lighten(@base-background-color, 5%);
 @background-color-selected:  lighten(@base-background-color, 10%);
-@app-background-color:       lighten(@base-background-color, 5%);
+@app-background-color:       lighten(@base-background-color, 3%);
 
 // Base colors
 @base-background-color: darken(#313557, 8%);
@@ -70,11 +79,16 @@
 @tree-view-border-color:     @base-border-color;
 
 // Site colors
-@ui-site-color-1: hsl(208, 100%, 50%); // blue
-@ui-site-color-2: hsl(160,  70%, 42%); // green
-@ui-site-color-3: hsl(32,   60%, 50%); // orange
-@ui-site-color-4: #D831B0;             // pink
-@ui-site-color-5: #EBDD5B;             // yellow
+@ui-site-color-1: darken(saturate(@BoldBlue, 20%), 15%);
+// blue
+@ui-site-color-2: darken(saturate(@BoldGreen, 20%), 18%);
+// green
+@ui-site-color-3: darken(saturate(#f2ab93, 20%), 8%);
+// orange
+@ui-site-color-4: darken(saturate(@BoldRed, 30%), 0%);
+// pink
+@ui-site-color-5: darken(saturate(#e2cc62, 20%), 12%);
+// yellow
 
 // Sizes
 @font-size: 12px;
@@ -82,10 +96,12 @@
 
 @disclosure-arrow-size: 12px;
 
-@component-padding: 10px;
+@component-padding: 15px;
 @component-icon-padding: 5px;
-@component-icon-size: 16px;
-@component-line-height: 25px;
+@component-icon-size: 14px;
+@component-line-height: 2.382em;
+
+
 
 @tab-height: 30px;
 
