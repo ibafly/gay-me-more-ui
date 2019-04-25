@@ -31,14 +31,18 @@
 
 // Colored buttons -----------------------
 
-.btn.btn-primary { .btn-color(@background-color-info); }
-.btn.btn-info    { .btn-color(@background-color-info); }
-.btn.btn-success { .btn-color(@background-color-success); }
-.btn.btn-warning { .btn-color(@background-color-warning); }
-.btn.btn-error   { .btn-color(@background-color-error); }
+.btn.btn-primary { .btn-bg-color(@background-color-info);
+.btn-text-color(@BoldMagenta); }
+.btn.btn-info    { .btn-bg-color(@background-color-info);
+.btn-text-color(lighten(#65a1ec, 20%)); }
+.btn.btn-success { .btn-bg-color(@background-color-success);
+.btn-text-color(lighten(#b1ba17, 25%)); }
+.btn.btn-warning { .btn-bg-color(@background-color-warning);
+.btn-text-color(lighten(#aec121, 20%)); }
+.btn.btn-error   { .btn-bg-color(@background-color-error);
+.btn-text-color(lighten(#f2ab93, 8%)); }
 
-.btn-color(@bg) {
-  color: @text-color-selected;
+.btn-bg-color(@bg) {
   background-color: @bg;
   &:hover,
   &:focus {
@@ -54,6 +58,10 @@
   &.selected:hover {
     background-color: lighten(@bg, 8%);
   }
+}
+
+.btn-text-color(@c) {
+  color: @c !important;
 }
 
 
