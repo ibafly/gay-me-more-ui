@@ -1,12 +1,19 @@
-
 // Base
 // -------------------
-
 // Used for global styles
-// Or to override certain Atom core styles
-
 // -------------------
 
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: @font-size;
+}
+
+atom-workspace {
+  background-color: @app-background-color;
+}
 
 body {
   font-size: @font-size;
@@ -16,6 +23,7 @@ body {
 
 atom-pane {
   border-right: 1px solid @base-border-color;
+
   &:last-child {
     border-right: none;
   }

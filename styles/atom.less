@@ -1,17 +1,7 @@
-
-* {
-	box-sizing: border-box;
-}
-
-html {
-	font-size: @font-size;
-}
-
-atom-workspace {
-	background-color: @app-background-color;
-}
-
-
+// Atom
+// ----------
+// To override certain Atom core styles
+// ----------
 // Scrollbars ------------------------------------
 
 .scrollbars-visible-always {
@@ -51,18 +41,20 @@ atom-workspace {
 		::-webkit-scrollbar-track {
 			background: @scrollbar-background-color-editor;
 		}
+
 		::-webkit-scrollbar-corner {
 			background: @scrollbar-background-color-editor;
 		}
+
 		::-webkit-scrollbar-thumb {
 			border-color: @scrollbar-background-color-editor;
 			background: @scrollbar-color-editor;
 		}
 	}
 }
-
 // TODO: Move to a better place, not sure where it gets used
+
 .caret {
-  border-top: 5px solid #fff;
-  margin-top: -1px;
+	border-top: 5px solid #fff;
+	margin-top: -1px;
 }
