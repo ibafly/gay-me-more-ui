@@ -6,10 +6,14 @@
 // Overrides: atom/tabs
 
 .tab-bar {
+  position: relative;
   background-color: @tab-bar-background-color;
   border-bottom: 1px solid @base-border-color;
 
   .tab {
+    padding: 0;
+    margin: 0;
+    flex: 1 1 0;
     color: @text-color;
     height: @tab-height;
     line-height: @tab-height;
@@ -17,10 +21,21 @@
     border-right: 1px solid @tab-border-color;
     background-color: @tab-background-color;
     &.active {
+      padding-right: 0;
+      flex: 2;
       color: @text-color-selected;
       background-color: @tab-background-color-active;
     }
 
+    .title {
+      margin: 0 .618em;
+      padding: 0 !important;
+      // text-align: center;
+    }
+
+    atom-dock & {
+      max-width: 100%;
+    }
 
     // Modified Icon (the circle) -------------------
     &.modified:not(:hover) .close-icon {
