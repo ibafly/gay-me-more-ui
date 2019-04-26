@@ -1,7 +1,5 @@
-
 // Tabs
 // -------------------
-
 // Displays selectable tabs above the editor.
 // Overrides: atom/tabs
 
@@ -21,6 +19,8 @@
     font-size: @font-size;
     border-right: 1px solid @tab-border-color;
     background-color: @tab-background-color;
+    transition: max-width 0.2s ease-in-out;
+
     &.active {
       padding-right: 0;
       flex: 1.618;
@@ -29,7 +29,7 @@
     }
 
     .title {
-      margin: 0 .618em;
+      margin: 0 0.618em;
       padding: 0 !important;
       // text-align: center;
     }
@@ -37,34 +37,58 @@
     atom-dock & {
       max-width: 100%;
     }
-
     // Modified Icon (the circle) -------------------
     &.modified:not(:hover) .close-icon {
       top: 50%;
-      right: @component-padding + 4px; // 4px -> half of icon size
+      // padding-right: @component-padding / 2 + 4px; // 4px -> half of icon size
+      padding-right: 4px;
       margin-top: -3px;
       border-color: @text-color-info;
+      transform: scale(1);
     }
+
     &.modified:hover .close-icon {
       color: currentColor;
     }
-
-
     // Close Icon (the X) -------------------
-    .close-icon:hover {
-      color: @text-color-selected;
+    .close-icon {
+      right: 0;
+      padding-right: @component-padding / 2; // bigger clicking aera
+
+      &::before {
+        transform: scale(0);
+      }
+
+      &:hover {
+        color: @text-color-selected;
+        // text-shadow: 0 0 15px rgba(255, 255, 255, .6);
+      }
     }
+
     &.active .close-icon:hover {
       color: @text-color;
     }
 
-
+    &:hover .close-icon::before {
+      transform: scale(1);
+      transition-duration: 0.168s;
+    }
+    // // Gradient bg to tab
+    // &.texteditor::before {
+    //   position: absolute;
+    //   width: 100%;
+    //   height: 30px;
+    //   content: "";
+    //   background-image: linear-gradient(to bottom right, @text-color-info, @text-color-highlight);
+    //   opacity: 0.2;
+    // }
     // Dragging -------------------
     // Styles get applied while dragging a tab
     &.is-dragging {
       background: darken(@tab-background-color, 10%);
       border-color: transparent;
-      opacity: .5;
+      opacity: 0.5;
+
       & .close-icon {
         visibility: hidden;
       }
