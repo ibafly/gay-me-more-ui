@@ -14,6 +14,7 @@
     padding: 0;
     margin: 0;
     flex: 1 1 0;
+    -webkit-flex-flow: row nowrap;
     color: @text-color;
     height: @tab-height;
     line-height: @tab-height;
@@ -22,7 +23,7 @@
     background-color: @tab-background-color;
     &.active {
       padding-right: 0;
-      flex: 2;
+      flex: 1.618;
       color: @text-color-selected;
       background-color: @tab-background-color-active;
     }
