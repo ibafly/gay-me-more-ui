@@ -1,6 +1,8 @@
 // Atom
 // ----------
 // To override certain Atom core styles
+// or customize other packages, use `` to mark
+// custom variables set in ui-variables-custom.less
 // ----------
 // Scrollbars ------------------------------------
 
@@ -52,9 +54,16 @@
 		}
 	}
 }
-// TODO: Move to a better place, not sure where it gets used
+// `indent-guide-improved`
 
-.caret {
-	border-top: 5px solid #fff;
-	margin-top: -1px;
+.indent-guide-improved {
+	background-color: @indent-guide-improved;
+
+	&.indent-guide-stack {
+		background-color: @indent-guide-stack;
+
+		&.indent-guide-active {
+			background-color: @indent-guide-active;
+		}
+	}
 }
