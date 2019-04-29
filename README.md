@@ -1,6 +1,6 @@
 # Gay me more UI theme
 
-Comboing with [Gay me more syntax theme](https://github.com/ibafly/gay-me-more-syntax). lively colors, peaceful feelings.
+Comboing with [Gay me more syntax theme](https://atom.io/packages/gay-me-more-syntax). lively colors, peaceful feelings.
 
 ## 🎺Caution
 
