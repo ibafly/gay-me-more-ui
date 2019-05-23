@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.7](https://github.com/ibafly/gay-me-more-ui/compare/v0.1.6...v0.1.7) (2019-05-23)
+
+
+### Bug Fixes
+
+* remove text underline when hover tiles in status bar ([5ebf52d](https://github.com/ibafly/gay-me-more-ui/commit/5ebf52d))
+* repick ui-site-colors ([031e8ae](https://github.com/ibafly/gay-me-more-ui/commit/031e8ae))
+
+
+
 ### [0.1.6](https://github.com/ibafly/gay-me-more-ui/compare/v0.1.5...v0.1.6) (2019-05-17)
 
 
